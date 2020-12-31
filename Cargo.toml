@@ -1,0 +1,19 @@
+[package]
+name = "bevy_megaui_web_showcase"
+version = "0.1.0"
+authors = ["mvlabat <mvlabat@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = { version = "0.4.0", default-features = false, features = ["x11", "bevy_winit", "render"] }
+bevy_megaui = "0.1.0"
+bevy_webgl2 = "0.4.1"
+wasm-bindgen = "0.2.69"
+
+#[patch.crates-io]
+#bevy_megaui = { path = "../bevy_megaui" }
