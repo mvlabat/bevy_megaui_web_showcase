@@ -1,0 +1,15 @@
+{
+  "name": "bevy_megaui_web_showcase",
+  "collaborators": [
+    "mvlabat <mvlabat@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "bevy_megaui_web_showcase_bg.wasm",
+    "bevy_megaui_web_showcase.js",
+    "bevy_megaui_web_showcase.d.ts"
+  ],
+  "module": "bevy_megaui_web_showcase.js",
+  "types": "bevy_megaui_web_showcase.d.ts",
+  "sideEffects": false
+}
