@@ -1,7 +1,7 @@
 use bevy::prelude::*;
 use bevy_megaui::{
     megaui::{self, hash, Vector2},
-    MegaUiContext, MegaUiPlugin, WindowParams,
+    MegaUiContext, MegaUiPlugin, MegaUiSettings, WindowParams,
 };
 use bevy_webgl2::WebGL2Plugin;
 use wasm_bindgen::prelude::*;
@@ -16,6 +16,7 @@ pub fn main() {
         .add_plugin(WebGL2Plugin)
         .add_plugin(MegaUiPlugin)
         .add_startup_system(load_assets.system())
+        .add_system(update_ui_scale_factor.system())
         .add_system(ui_example.system())
         .run();
 }
@@ -37,6 +38,12 @@ fn load_assets(_world: &mut World, resources: &mut Resources) {
 
     let texture_handle = asset_server.load("icon.png");
     megaui_context.set_megaui_texture(BEVY_TEXTURE_ID, texture_handle);
+}
+
+fn update_ui_scale_factor(mut megaui_settings: ResMut<MegaUiSettings>, windows: Res<Windows>) {
+    if let Some(window) = windows.get_primary() {
+        megaui_settings.scale_factor = 1.0 / window.scale_factor();
+    }
 }
 
 fn ui_example(_world: &mut World, resources: &mut Resources) {

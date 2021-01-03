@@ -398,9 +398,9 @@ dependencies = [
 
 [[package]]
 name = "bevy_megaui"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eab40e098d3d1b3c37d284850862c98bd92cf61222961f91e63287af5a28258b"
+checksum = "168a31399c023c92fee2f73377623b653d1429cfd959aaff3eba5a27d3d1ea93"
 dependencies = [
  "bevy",
  "megaui",
@@ -1482,9 +1482,9 @@ checksum = "60302e4db3a61da70c0cb7991976248362f30319e88850c487b9b95bbf059e00"
 
 [[package]]
 name = "megaui"
-version = "0.2.15"
+version = "0.2.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "056f9081d77f960d8f6f3f85fa51fff27bb1cd98285411565de0eada1f36d576"
+checksum = "a1fb6ae081138c55f6ef12d9d3105c8f4b9c4daad841f5ae0c873969da9d605f"
 dependencies = [
  "miniquad_text_rusttype",
 ]
